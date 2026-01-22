@@ -47,22 +47,30 @@ body{
 /* Header releted style */
 header{
     padding: 24px 0;
-    /* background-color: #412567; */
 }
 .container {
     justify-content: space-between;
-    align-items: center;
+     align-items: center;  
     max-width: 1200px;
     margin: 0 auto;
 }
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .bar{
-    /* display: none; */
-    opacity: 0;
+
+    display: none;
     font-size: 3.75rem;
     color: #ffffff;
 }
+.text{
+    margin: auto 0;
+}
 
-.brand-title>span{
+.title>span{
     background: linear-gradient(to bottom,
    #F7E93F 0%,
    #FB09B4 51%,
@@ -71,6 +79,7 @@ header{
    -webkit-text-fill-color: transparent;
 }
 .menu{
+    
     list-style: none;
     gap: 2rem;
 }
@@ -93,7 +102,6 @@ header{
 /* Banner releted style */
 .banner-container{
     background-image: url(./assets/hero-bg.png);
-    min-width: 1600px;
     text-align: center;
      margin: 100px 0; 
      /* background-repeat: no-repeat;  */
@@ -101,7 +109,6 @@ header{
      
 }
 .banner-content-container{
-    /* max-width: 560px; */
       margin: 0 auto;  
     position: relative;
     top: -30px;
@@ -127,7 +134,7 @@ header{
     left: 250px;
 }
 .banner-circle-microphone img{
-    width: 116;
+    width: 116px;
 }
 .banner-description{
     font-size: 1rem;
@@ -166,6 +173,46 @@ header{
     border: 2px solid greenyellow;
 }
 
+/* podcast section */
+.podcast-container{
+}
+.content-container{
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+.content{
+    margin-bottom: 160px;
+    margin-top: 50px;
+}
+.content>h3{
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffff;
+}
+.content>p{
+    font-size: 1rem;
+    color: #ffff;
+    line-height: 20px;
+}
+.review{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 80px;
+    margin-bottom: 120px;
+
+
+}
+.rate h1{
+    font-size: 3rem;
+    color: #00FF88;
+}
+.rate p{
+    font-size: 1rem;
+    color: #fff;
+    line-height: 20px;
+}
+
 /* responsive releted degine */
 @media screen and (max-width:576px) {
     .menubar,
@@ -180,23 +227,21 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
      margin: 0 auto; 
 
     
  }
  .bar{
-        opacity: 1;
+        display: block;
     font-size: 2rem;
     }
     .banner-container{
     
-    min-width: 560px;
+   width: 100%;
     text-align: center;
       margin: 0 auto;  
-     padding-top: 10px;
-     /* background-position: middle;
-      */
+      padding-top: 10px;
       background-size: contain;
       background-repeat: no-repeat;
      
@@ -205,6 +250,8 @@ header{
     width: 40%;
     margin: 0 auto;
      margin-top: 10px;
+       
+    background-color: transparent;
 
 }
 .banner-circle-image{
@@ -243,6 +290,46 @@ header{
     padding: 4px 4px;
     font-size: 14px;
 }
+.content-container{
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+.review{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 80px;
+    margin-bottom: 120px;
 
 
+}
+}
+/* large device style */
+@media screen and (min-width:576px) and (max-width:992px){
+     .banner-container{
+        background-size: cover;
+        background-position: center;
+        margin: 120px 0;
+    }
+    .banner-content-container{
+        width: 70%;
+        max-width: 900px;
+        padding: 40px 20px;
+    }
+    .banner-circle-image img{
+        width: 100%;
+        max-width: 560px;
+    }
+    .banner-circle-microphone{
+        position: absolute;
+        top: 220px;
+        left: 270px;
+    }
+    .new button{
+        top: 70px;
+        left: 480px;
+        position: absolute;
+
+    } 
+     
 }
